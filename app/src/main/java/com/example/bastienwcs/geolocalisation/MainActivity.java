@@ -37,13 +37,12 @@ public class MainActivity extends AppCompatActivity {
         mLocationListener = new LocationListener() {
             public void onLocationChanged(Location location) {
                 // Called when a new location is found by the network location provider.
-                Log.i(TAG, "onLocationChanged: ");
                 Toast.makeText(MainActivity.this, location.toString(), Toast.LENGTH_SHORT).show();
                 ((TextView) findViewById(R.id.localisation)).setText(location.toString());
             }
 
             public void onStatusChanged(String provider, int status, Bundle extras) {
-                Log.i(TAG, "onStatusChanged: ");
+
             }
 
             public void onProviderEnabled(String provider) {
@@ -57,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkPermission() {
-        Log.i(TAG, "checkLocation: ");
         // Register the listener with the Location Manager to receive location updates
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED
