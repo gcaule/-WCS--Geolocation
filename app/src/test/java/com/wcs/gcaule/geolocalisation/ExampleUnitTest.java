@@ -1,4 +1,4 @@
-package com.example.bastienwcs.geolocalisation;
+package com.wcs.gcaule.geolocalisation;
 
 import org.junit.Test;
 
